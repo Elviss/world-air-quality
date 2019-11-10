@@ -1,0 +1,73 @@
+<ion-view view-title="Busca">
+  <ion-content>
+
+    <form ng-submit="buscar()">
+    <div class="list list-inset">
+      <label class="item item-input">
+        <i class="icon ion-search placeholder-icon"></i>
+        <input type="text" placeholder="Search" ng-model="a.buscar">
+        <button class="button button-small">
+          Buscar
+        </button>
+      </label>
+    </div>
+    </form>
+
+    <div ng-show="status != 'error' && status != null">
+
+      <center><h3>{{infos.city.name}}</h3></center>
+
+      <div class="list">
+
+        <a class="item item-icon-left" href="#">
+          <!--        <i class="icon ion-email"></i>-->
+          Qualidade do ar:
+          <span class="badge badge-assertive">{{infos.aqi}}</span>
+        </a>
+
+        <a class="item item-icon-left item-icon-right" href="#">
+          <!--        <i class="icon ion-chatbubble-working"></i>-->
+          Nível de CO:
+          <span class="badge badge-assertive">{{infos.iaqi.co.v}}</span>
+
+        </a>
+
+        <a class="item item-icon-left" href="#">
+          <!--        <i class="icon ion-mic-a"></i>-->
+          Nível de NO2:
+          <span class="badge badge-assertive">{{infos.iaqi.no2.v}}</span>
+
+        </a>
+
+        <a class="item item-icon-left" href="#">
+          <!--        <i class="icon ion-person-stalker"></i>-->
+          Nível de ozônio:
+          <span class="badge badge-assertive">{{infos.iaqi.o3.v}}</span>
+        </a>
+
+        <a class="item item-icon-left" href="#">
+          <!--        <i class="icon ion-person-stalker"></i>-->
+          Nível de ozônio:
+          <span class="badge badge-assertive">{{infos.iaqi.pm10.v}}</span>
+        </a>
+
+        <a class="item item-icon-left" href="#">
+          <!--        <i class="icon ion-person-stalker"></i>-->
+          Nível partículas PM10:
+          <span class="badge badge-assertive">{{infos.iaqi.pm10.v}}</span>
+        </a>
+
+        <a class="item item-icon-left" href="#">
+          <!--        <i class="icon ion-person-stalker"></i>-->
+          Nível partículas PM2.5:
+          <span class="badge badge-assertive">{{infos.iaqi.pm25.v}}</span>
+        </a>
+
+      </div>
+    </div>
+
+    <div ng-show="status == 'error'">
+      <h4>Nenhuma informação encontrada</h4>
+    </div>
+  </ion-content>
+</ion-view>
