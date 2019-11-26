@@ -8,7 +8,6 @@ angular.module('starter.controllers', [])
 
   $http.get($scope.url)
       .success(function(response){
-        console.log(response);
 
         $scope.infos = response.data;
 
@@ -19,13 +18,10 @@ angular.module('starter.controllers', [])
 
   $scope.doRefresh = function() {
 
-    console.log('Refreshing!');
-
     $timeout( function() {
 
       $http.get($scope.url)
         .success(function(response){
-          console.log(response);
 
           $scope.infos = response.data;
 
@@ -42,7 +38,7 @@ angular.module('starter.controllers', [])
 
 })
 
-.controller('ChatsCtrl', function($scope, $http) {
+.controller('SearchCtrl', function($scope, $http) {
 
   $scope.infos = {
     data: []

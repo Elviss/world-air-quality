@@ -2,15 +2,15 @@
   <ion-content>
 
     <form ng-submit="buscar()">
-    <div class="list list-inset">
-      <label class="item item-input">
-        <i class="icon ion-search placeholder-icon"></i>
-        <input type="text" placeholder="Search" ng-model="a.buscar">
-        <button class="button button-small">
-          Buscar
-        </button>
-      </label>
-    </div>
+      <div class="list list-inset">
+        <label class="item item-input">
+          <i class="icon ion-search placeholder-icon"></i>
+          <input type="text" placeholder="Search" ng-model="a.buscar">
+          <button class="button button-small">
+            Buscar
+          </button>
+        </label>
+      </div>
     </form>
 
     <div ng-show="status != 'error' && status != null">
@@ -27,13 +27,11 @@
         <a class="item item-icon-left item-icon-right" href="#">
           Nível de CO:
           <span class="badge badge-assertive">{{infos.iaqi.co.v}}</span>
-
         </a>
 
         <a class="item item-icon-left" href="#">
           Nível de NO2:
           <span class="badge badge-assertive">{{infos.iaqi.no2.v}}</span>
-
         </a>
 
         <a class="item item-icon-left" href="#">
